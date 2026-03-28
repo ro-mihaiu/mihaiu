@@ -6,8 +6,8 @@
 }
 
 body {
-    background: #050505;
-    color: #e5e5e5;
+    background: var(--bg);
+    color: var(--text);
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
     scroll-behavior: smooth;
@@ -15,9 +15,19 @@ body {
 }
 
 :root {
-    --accent: #00eaff;
+    --bg: #050505;
+    --text: #e5e5e5;
     --surface: #0a0a0a;
+    --accent: #00eaff;
     --muted: #d1d5db;
+}
+
+.light-mode {
+    --bg: #f5f5f5;
+    --text: #1a1a1a;
+    --surface: #ffffff;
+    --accent: #007acc;
+    --muted: #666666;
 }
 
 .navbar {
@@ -29,7 +39,7 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    background: rgba(5, 5, 5, 0.75);
+    background: rgba(var(--bg), 0.75);
     -webkit-backdrop-filter: blur(16px);
     backdrop-filter: blur(16px);
     z-index: 1000;
@@ -37,7 +47,7 @@ body {
 }
 
 .navbar.scrolled {
-    background: rgba(3, 3, 3, 0.8);
+    background: rgba(var(--bg), 0.8);
     -webkit-backdrop-filter: blur(18px);
     backdrop-filter: blur(18px);
 }
@@ -65,7 +75,7 @@ body {
 }
 
 .nav-links a {
-    color: #e5e5e5;
+    color: var(--text);
     text-decoration: none;
     font-size: 0.95rem;
     position: relative;
@@ -103,6 +113,22 @@ body {
     width: 100%;
 }
 
+.theme-toggle {
+    background: none;
+    border: 1px solid rgba(var(--accent), 0.3);
+    color: var(--accent);
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all .25s ease;
+    font-size: 1rem;
+}
+
+.theme-toggle:hover {
+    background: rgba(var(--accent), 0.12);
+    box-shadow: 0 0 10px rgba(var(--accent), 0.25);
+}
+
 .main {
     padding-top: 90px;
 }
@@ -114,7 +140,7 @@ body {
     position: relative;
     padding: 0 36px;
     overflow: hidden;
-    background: linear-gradient(45deg, #050505, #0a0a0a, #050505);
+    background: linear-gradient(45deg, var(--bg), var(--surface), var(--bg));
     background-size: 300% 300%;
     animation: gradientShift 12s ease infinite;
 }
@@ -656,8 +682,8 @@ p {
 
 .footer {
     padding: 16px 0;
-    background: rgba(5, 5, 5, .85);
-    border-top: 1px solid rgba(0, 234, 255, .15);
+    background: rgba(var(--bg), 0.85);
+    border-top: 1px solid rgba(var(--accent), 0.15);
 }
 
 .footer p {
@@ -677,7 +703,7 @@ p {
     inset: 0;
     pointer-events: none;
     z-index: 2000;
-    background: radial-gradient(circle at center, rgba(0, 234, 255, .08), rgba(0, 0, 0, .9));
+    background: radial-gradient(circle at center, rgba(var(--accent), 0.08), rgba(var(--bg), 0.9));
     opacity: 0;
     transition: opacity .35s ease;
 }
