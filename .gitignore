@@ -1,0 +1,12 @@
+mihaiu\
+  assets\
+    images\
+    fonts\
+  pages\
+    about.html
+    projects.html
+  index.html
+  style.css
+  script.js
+  LICENSE
+  README.md
