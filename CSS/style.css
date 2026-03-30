@@ -710,7 +710,7 @@ p {
 .indented-justified {
   text-indent: 2em;             /* first-line indent (the “tab”) */
   text-align: justify;          /* justify text on both sides */
-  text-justify: inter-word;     /* nicer word spacing (optional) */
+/*  text-justify: inter-word;      nicer word spacing (optional) */
   line-height: 1.6;             /* optional: better readability */
 }
 
