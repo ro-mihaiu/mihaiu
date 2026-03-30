@@ -27,7 +27,7 @@ function scrollRevealSetup() {
         });
     }, { threshold: 0.12 });
 
-    document.querySelectorAll('.reveal, .card, .skill-item, .contact-item, .project-card, .blog-card, .faq').forEach((el) => {
+    document.querySelectorAll('.reveal, .card, .skill-item, .contact-item, .project-card, .about-card').forEach((el) => {
         observer.observe(el);
     });
 }
