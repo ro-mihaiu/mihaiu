@@ -2,63 +2,74 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Mihai - Projects</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-    <link rel="stylesheet" href="../CSS/style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mihai - Projects</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="/mihaiu/CSS/styles.css" />
 </head>
 
 <body>
-    <div class="page-transition"></div>
-    <nav class="navbar">
-        <div class="logo"><a href="\index.html">mihaiu.zapto.org</a></div>
-        <ul class="nav-links">
-            <li><a href="\index.html" class="nav-link">Home</a></li>
-            <li><a href="projects.html" class="nav-link">Projects</a></li>
-            <li><a href="about.html" class="nav-link">About</a></li>
-            <li><a href="\index.html#contact-preview" class="nav-link">Contact</a></li>
-        </ul><button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme"><i
-                class="fas fa-moon"></i></button>
-    </nav>
-    <main>
-        <section class="simple-hero reveal">
-            <div class="container">
-                <h1>Projects</h1>
-                <p class="subtitle">Selected work, tools, and community-driven features. That I mainly work on</p>
+  <div class="page-transition"></div>
+  <nav class="navbar">
+    <div class="logo"><a href="/mihaiu/index.html">mihaiu.zapto.org</a></div>
+    <ul class="nav-links">
+      <li><a href="/mihaiu/index.html" class="nav-link">Home</a></li>
+      <li><a href="/mihaiu/Html/projects.html" class="nav-link">Projects</a></li>
+      <li><a href="/mihaiu/Html/about.html" class="nav-link">About</a></li>
+      <li><a href="/mihaiu/index.html#contact-preview" class="nav-link">Contact</a></li>
+    </ul>
+    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+      <i class="fas fa-moon"></i>
+    </button>
+  </nav>
+  <main>
+    <section class="simple-hero reveal">
+      <div class="container">
+        <h1>Projects</h1>
+        <p class="subtitle">Selected work, tools, and community-driven features. That I mainly work on</p>
+      </div>
+      <div class="section-separator"></div>
+    </section>
+    <section class="projects">
+      <div class="container">
+        <div class="cards-grid">
+          <article class="project-card reveal">
+            <h3>C++ Algorithms</h3>
+            <p>
+              Free code snippets and utilities written in C++, having some explanations.
+              Mainly for
+              <a href="https://pbinfo.ro" color="#00eaff" target="_blank" rel="noopener noreferrer">pbinfo.ro</a>.
+            </p>
+            <div class="tech-list">
+              <span>C++</span><span>SQLite</span>
             </div>
-            <div class="section-separator"></div>
-        </section>    
-        <section class="projects">
-            <div class="container">
-                <div class="cards-grid">
-                    <article class="project-card reveal">
-                        <h3>C++ Algorithms</h3>
-                        <p>Free code snippets and utilities written in C++, having some explanations. Mainly for <a href="https://pbinfo.ro" color="#00eaff" target="_blank" rel="noopener noreferrer">pbinfo.ro</a>.</p>
-                        <div class="tech-list"><span>C++</span><span>SQLite</span></div>
-                        <a href="https://ro-mihaiu.github.io/cpp-codes/" target="_blank"
-                            rel="noopener noreferrer" class="action-btn">Click here</a>
-                    </article>
-                </div>
-                <div class="cards-grid">
-                    <article class="project-card reveal">
-                        <h3>Vendeta's Portfolio</h3>
-                        <p>A modern, responsive portfolio website for Vendeta, showcasing their work and skills.</p>
-                        <div class="tech-list"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
-                        <a href="https://github.com/VendetaT" target="_blank" rel="noopener noreferrer" class="action-btn">Click here</a>
-                    </article>
-                </div>
-            </div>
-        </section>
-    </main>
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2026 Mihai | Built with passion</p>
-            <p><a href="mailto:mihaiu.dev@gmail.com">mihaiu.dev@gmail.com</a></p>
+            <a href="https://ro-mihaiu.github.io/cpp-codes/" target="_blank"
+              rel="noopener noreferrer" class="action-btn">Click here</a>
+          </article>
         </div>
-    </footer>
-    <script src="../JS/script.js"></script>
+        <div class="cards-grid">
+          <article class="project-card reveal">
+            <h3>Vendeta's Portfolio</h3>
+            <p>A modern, responsive portfolio website for Vendeta, showcasing their work and skills.</p>
+            <div class="tech-list">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span>
+            </div>
+            <a href="https://github.com/VendetaT" target="_blank"
+              rel="noopener noreferrer" class="action-btn">Click here</a>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Mihai | Built with passion</p>
+      <p><a href="mailto:mihaiu.dev@gmail.com">mihaiu.dev@gmail.com</a></p>
+    </div>
+  </footer>
+  <script src="/mihaiu/JS/script.js"></script>
 </body>
 
 </html>
