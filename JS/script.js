@@ -99,27 +99,6 @@ function navbarScrollStyling() {
     });
 }
 
-function themeToggleSetup() {
-    const toggle = document.getElementById('theme-toggle');
-    if (!toggle) return;
-    const icon = toggle.querySelector('i');
-
-    const applyTheme = (isLight) => {
-        document.documentElement.classList.toggle('light-mode', isLight);
-        icon.className = isLight ? 'fas fa-sun' : 'fas fa-moon';
-        localStorage.setItem('theme', isLight ? 'light' : 'dark');
-    };
-
-    const savedTheme = localStorage.getItem('theme');
-    const isLight = savedTheme === 'light';
-    applyTheme(isLight);
-
-    toggle.addEventListener('click', () => {
-        const currentIsLight = document.documentElement.classList.contains('light-mode');
-        applyTheme(!currentIsLight);
-    });
-}
-
 function init() {
     setupTyping();
     scrollRevealSetup();
@@ -127,7 +106,6 @@ function init() {
     accordionSetup();
     pageTransitions();
     navbarScrollStyling();
-    themeToggleSetup();
     const hashTarget = window.location.hash;
     if (hashTarget) {
         setTimeout(() => {
