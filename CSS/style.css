@@ -214,6 +214,7 @@ body {
 .cta-btn.secondary:hover {
     background: rgba(255, 255, 255, 0.18);
     box-shadow: 0 0 18px rgba(76, 49, 255, 0.18);
+    border: 1px solid var(--accent);
 }
 
 .gradient-title,
@@ -236,7 +237,7 @@ body {
 
 .view-link:hover {
     color: #ffffff;
-    background: rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.1);
     border-color: var(--accent-soft);
 }
 
@@ -255,7 +256,7 @@ body {
 .section-separator {
     height: 1px;
     background: linear-gradient(90deg, transparent, rgba(124, 110, 255, 0.45), transparent);
-    margin: 60px 0;
+    margin: 5px 0;
 }
 
 @keyframes bounce {
@@ -334,7 +335,7 @@ h2 {
 .card:hover {
     transform: translateY(-8px);
     box-shadow: 0 24px 60px rgba(25, 29, 68, 0.28);
-    border-color: rgba(76, 49, 255, 0.35);
+    border-color: var(--accent-soft);
 }
 
 .badge {
@@ -454,7 +455,7 @@ h2 {
 .skill-item:hover {
     transform: translateY(-6px);
     box-shadow: 0 22px 42px rgba(25, 29, 68, 0.18);
-    border-color: rgba(76, 49, 255, 0.28);
+    border-color: var(--accent-soft);
 }
 
 .skill-header {
@@ -492,7 +493,7 @@ h2 {
 }
 
 .skill-icon:hover {
-    box-shadow: 0 0 10px rgba(121, 194, 243, .42);
+    box-shadow: 0 0 10px var(--accent);
 }
 
 .skill-icon.python {
@@ -565,7 +566,7 @@ h2 {
 .contact-item:hover {
     transform: translateY(-4px);
     box-shadow: 0 20px 38px rgba(25, 29, 68, 0.18);
-    border-color: rgba(76, 49, 255, 0.28);
+    border-color: var(--accent-soft);
 }
 
 .contact-icon {
@@ -615,6 +616,55 @@ p {
     box-shadow: 0 0 16px rgba(124, 110, 255, 0.2);
 }
 
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-input {
+    background: rgba(12, 14, 30, 0.82);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    padding: 15px;
+    color: var(--text);
+    font-family: inherit;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(16px);
+}
+
+.form-input:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(121, 194, 243, 0.1);
+    outline: none;
+}
+
+.form-input::placeholder {
+    color: rgba(248, 247, 255, 0.6);
+}
+
+.form-button {
+    background: linear-gradient(135deg, var(--accent), var(--accent-soft));
+    color: #070610;
+    border: none;
+    border-radius: 999px;
+    padding: 15px 30px;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    align-self: flex-end;
+}
+
+.form-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(121, 194, 243, 0.3);
+}
+
 .project-card {
     background: rgba(12, 14, 30, 0.82);
     border: 1px solid rgba(255, 255, 255, 0.08);
@@ -630,18 +680,32 @@ p {
 .project-card:hover {
     transform: translateY(-6px);
     box-shadow: 0 18px 42px rgba(25, 29, 68, 0.18);
-    border-color: rgba(76, 49, 255, 0.28);
+    border-color: var(--accent-soft);
 }
 
 .project-card h3 {
-    margin: 0 0 10px;
-    color: var(--accent);
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-align: left;
+    background: linear-gradient(90deg, var(--accent-soft), var(--accent-warm));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
 }
 
 .project-card {
     font-size: .95rem;
     opacity: .9;
     margin-bottom: 12px;
+}
+
+.project-gradient {
+    background: linear-gradient(90deg, var(--accent), var(--accent-soft));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: 700;
 }
 
 .tech-list {
@@ -656,7 +720,7 @@ p {
     padding: 4px 8px;
     border-radius: 999px;
     background: rgba(121, 194, 243, .08);
-    border: 1px solid rgba(121, 194, 243, .24);
+    border: 1.2px solid var(--accent);
 }
 
 .action-btn {
@@ -687,34 +751,41 @@ p {
 
 .footer {
     padding: 24px 0 30px;
-    background: rgba(7, 6, 16, 0.88);
-    border-top: 1px solid rgba(124, 110, 255, 0.18);
+    background: rgba(6, 6, 6, 0.6);
+    border-top: 1.5px solid rgba(124, 110, 255, 0.18);
 }
 
 .footer-inner {
     display: grid;
-    grid-template-columns: auto 1fr;
+    grid-template-columns: 1fr auto 1fr;
     align-items: center;
-    gap: 10px;
+    /*gap: 10px;*/
     width: 90%;
     max-width: 1120px;
     margin: 0 auto;
 }
 
 .footer-links {
+    grid-column: 1;
     display: flex;
-    gap: 12px;
+    gap: 8px;
     align-items: center;
-    justify-self: left;
+    justify-self: start;
 }
 
 .footer-meta {
-    display: flex;
+    grid-column: 2;
+    text-align: center;
+    justify-self: center;
+    /*display: flex;
     flex-direction: column;
     align-items: center;
-    justify-self: center;
-    text-align: center;
-    gap: 4px;
+    gap: 4px;*/
+}
+
+.footer-inner::after {
+    content: "";
+    grid-column: 3;
 }
 
 .footer-icon {
@@ -735,13 +806,6 @@ p {
     background: rgba(255, 255, 255, 0.1);
 }
 
-.footer-meta {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 4px;
-}
-
 .footer p {
     margin: .25rem 0;
     color: #a3a3a3;
@@ -749,7 +813,7 @@ p {
 }
 
 .footer a {
-    color: var(--accent);
+    gradient: var(--accent), var(--accent-soft);
     text-decoration: none;
 }
 
@@ -757,7 +821,7 @@ p {
     display: inline-block;
     animation: gradientText 3s linear infinite;
     background-size: 200% auto;
-    background: linear-gradient(90deg, var(--accent), var(--accent-soft));
+    background: linear-gradient(90deg, var(--accent-soft), var(--accent-warm));
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -819,7 +883,7 @@ p {
 .about-card:hover {
     transform: translateY(-6px);
     box-shadow: 0 18px 40px rgba(25, 29, 68, 0.18);
-    border-color: rgba(76, 49, 255, 0.28);
+    border-color: var(--accent-soft);
 }
 
 .about-card h3 {
@@ -884,6 +948,37 @@ p {
 
 .contact-text p {
     margin-bottom: 16px;
+}
+
+/* Chrome, Edge, Safari */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.02);
+    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg,
+            var(--accent),
+            var(--accent-soft));
+    border-radius: 10px;
+    border: 2px solid rgba(10, 10, 15, 0.6);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg,
+            var(--accent-soft),
+            var(--accent-warm));
+    box-shadow: 0 0 10px var(--accent);
+}
+
+html {
+    scrollbar-width: thin;
+    scrollbar-color: #79c2f3 rgba(10, 10, 15, 0.6);
 }
 
 @media(max-width:768px) {

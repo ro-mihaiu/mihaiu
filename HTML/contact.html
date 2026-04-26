@@ -26,27 +26,18 @@
     <section class="simple-hero reveal">
       <div class="container">
         <h2>Contact</h2>
-        <p class="subtitle">Get in touch with me.</p>
+        <p class="subtitle">Contact me for more details about future projects, or simply say hello!</p>
       </div>
-      <div class="section-separator"></div>
     </section>
+    <div class="section-separator"></div>
     <section class="contact">
       <div class="container">
-        <div class="contact-content">
-          <div class="contact-social">
-            <a href="https://discord.com/users/1027052856697684099" class="contact-icon discord" target="_blank"
-              rel="noopener noreferrer"><i class="fab fa-discord"></i></a>
-            <a href="https://github.com/ro-mihaiu" class="contact-icon github" target="_blank"
-              rel="noopener noreferrer"><i class="fab fa-github"></i></a>
-            <a href="https://instagram.com/ro_mihaiu" class="contact-icon instagram" target="_blank"
-              rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
-          </div>
-          <div class="contact-text">
-            <p>Feel free to reach out via email at <a href="mailto:mihaiu.dev@gmail.com"
-                class="gradient-email">mihaiu.dev@gmail.com</a> or connect with me on social media.</p>
-            <p>I'm always open to discussing new projects, collaborations, or just chatting about tech and gaming.</p>
-          </div>
-        </div>
+        <form action="mailto:mihaiu.dev@gmail.com" method="post" enctype="text/plain" class="contact-form">
+          <input type="text" name="name" placeholder="Your Name" class="form-input" required>
+          <input type="email" name="email" placeholder="your@email.com" class="form-input" required>
+          <textarea name="message" placeholder="Your message" rows="5" class="form-input" required></textarea>
+          <button type="submit" class="form-button">Send Message</button>
+        </form>
       </div>
     </section>
   </main>
